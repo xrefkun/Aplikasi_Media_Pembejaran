@@ -1,0 +1,151 @@
+================================================================================
+          MANUAL BOOK / PANDUAN PENGGUNAAN APLIKASI MEDIAPEMBELAJARAN
+================================================================================
+
+Aplikasi MediaPembelajaran adalah platform pembelajaran digital berbasis Android 
+yang dirancang untuk memfasilitasi interaksi belajar mengajar secara mandiri. 
+Aplikasi ini membagi akses menjadi tiga peran utama: Siswa (Student), Guru 
+(Teacher), dan Admin.
+
+Dokumen ini menjelaskan petunjuk instalasi, konfigurasi awal, dan panduan 
+penggunaan untuk masing-masing peran tersebut.
+
+--------------------------------------------------------------------------------
+DAFTAR ISI
+--------------------------------------------------------------------------------
+1. PERSYARATAN SISTEM & INSTALASI
+2. PANDUAN UNTUK SISWA (STUDENT)
+3. PANDUAN UNTUK GURU (TEACHER)
+4. PANDUAN UNTUK ADMINISTRATOR (ADMIN)
+5. PANDUAN TROUBLESHOOTING & DUKUNGAN
+
+================================================================================
+1. PERSYARATAN SISTEM & INSTALASI
+================================================================================
+
+A. Spesifikasi Minimum Perangkat:
+   - Sistem Operasi: Android 7.0 (Nougat) atau versi di atasnya.
+   - RAM: Minimum 2 GB (Disarankan 3 GB atau lebih).
+   - Penyimpanan Kosong: Minimum 100 MB.
+   - Koneksi Internet: Diperlukan (Koneksi 3G/4G/5G atau Wi-Fi aktif).
+
+B. Langkah Instalasi Aplikasi (.apk):
+   1. Unduh file APK MediaPembelajaran yang telah di-build oleh pengembang.
+   2. Pada perangkat Android Anda, buka Pengaturan -> Keamanan -> Aktifkan
+      opsi "Instal Aplikasi dari Sumber Tidak Dikenal" (Unknown Sources).
+   3. Buka file manager, cari file APK yang telah diunduh, lalu ketuk untuk
+      memulai instalasi.
+   4. Tunggu hingga proses instalasi selesai, lalu jalankan aplikasi melalui
+      ikon di menu utama perangkat Anda.
+
+================================================================================
+2. PANDUAN UNTUK SISWA (STUDENT)
+================================================================================
+
+Siswa menggunakan aplikasi ini untuk membaca materi belajar interaktif dan 
+mengerjakan kuis yang disediakan oleh Guru.
+
+A. Registrasi dan Login:
+   1. Buka aplikasi, Anda akan disambut oleh Layar Awal (Onboarding Slider).
+   2. Tekan "Mulai Sekarang" untuk menuju halaman Login.
+   3. Jika belum memiliki akun, klik "Daftar Akun Baru" di bagian bawah layar.
+   4. Isi Nama Lengkap, Email, Nomor Telepon, Kata Sandi, dan pilih role "Siswa".
+   5. Klik tombol "Daftar" dan verifikasi akun Anda jika diperlukan.
+   6. Setelah terdaftar, masukkan Email dan Sandi Anda pada Halaman Login, lalu
+      klik "Masuk".
+
+B. Membaca Materi Pelajaran:
+   1. Pada Beranda (Dashboard), Anda akan melihat daftar materi pembelajaran yang
+      dikelompokkan berdasarkan kategori (Biologi, Fisika, Kimia).
+   2. Ketuk salah satu materi untuk membuka halaman Detail Materi.
+   3. Di halaman ini, Anda dapat membaca penjelasan teks lengkap, melihat gambar
+      ilustrasi pendukung, atau memutar video pembelajaran yang disematkan.
+   4. Progress membaca Anda akan disimpan secara otomatis oleh sistem.
+
+C. Mengerjakan Kuis Pilihan Ganda:
+   1. Dari menu Dashboard atau navigasi bawah, pilih menu "Kuis".
+   2. Ketuk kuis yang aktif sesuai kategori mata pelajaran yang ingin Anda kerjakan.
+   3. Jawab pertanyaan pilihan ganda dengan memilih salah satu opsi (A, B, C, D).
+   4. Anda dapat menggunakan tombol "Berikutnya" atau "Sebelumnya" untuk menavigasi 
+      soal kuis. Sistem akan menyimpan sementara pilihan Anda jika ingin mengubah 
+      jawaban sebelum dikirim.
+   5. Setelah selesai menjawab semua soal, klik tombol "Kirim Jawaban" di halaman 
+      soal terakhir.
+   6. Hasil nilai akhir Anda akan langsung muncul di layar beserta daftar jawaban 
+      yang benar dan salah.
+
+================================================================================
+3. PANDUAN UNTUK GURU (TEACHER)
+================================================================================
+
+Guru bertindak sebagai pembuat konten materi, pengelola kuis, dan pemantau 
+perkembangan nilai siswa.
+
+A. Login khusus Guru:
+   - Pastikan akun Anda telah didaftarkan dengan pilihan Role "Guru" saat register.
+   - Login menggunakan kredensial email dan password Anda.
+
+B. Mengelola Kuis (Panel Guru / Teacher Panel):
+   1. Akses menu "Kelola Kuis" di navigasi bawah (Teacher Dashboard).
+   2. Pilih kategori mata pelajaran yang ingin Anda kelola (Biologi / Fisika / Kimia).
+   3. Anda akan melihat daftar kuis yang sudah dibuat sebelumnya.
+   4. Untuk menambahkan kuis baru:
+      - Klik tombol "+" atau "Tambah Kuis" di bagian kanan bawah.
+      - Masukkan judul kuis dan deskripsi singkat.
+      - Tulis pertanyaan kuis, masukkan 4 opsi pilihan jawaban, dan tentukan
+        kunci jawaban yang benar.
+      - Klik "Simpan Soal" untuk mengunggah data langsung ke Firestore Cloud.
+   5. Anda juga dapat mengubah (edit) atau menghapus soal kuis yang sudah ada
+      dengan mengetuk ikon pensil/tempat sampah pada list kuis.
+
+C. Memantau Nilai Siswa:
+   - Akses tab "Nilai Siswa" untuk melihat daftar siswa yang telah mengerjakan
+     kuis beserta skor yang diperoleh.
+
+================================================================================
+4. PANDUAN UNTUK ADMINISTRATOR (ADMIN)
+================================================================================
+
+Admin memegang kontrol penuh terhadap otorisasi hak akses user dan pemeliharaan
+database sistem.
+
+A. Akses Panel Admin:
+   - Menu Admin hanya akan muncul jika email akun Anda telah dikonfigurasi 
+     sebagai admin utama dalam database Firebase Firestore.
+
+B. Manajemen User & Role:
+   1. Buka "Admin Dashboard" dari navigasi utama.
+   2. Anda akan melihat daftar semua pengguna terdaftar (Siswa dan Guru).
+   3. Untuk merubah otorisasi pengguna:
+      - Ketuk nama pengguna yang dituju.
+      - Pilih opsi "Ubah Role" (misal: mempromosikan Siswa menjadi Guru).
+      - Tekan "Simpan Perubahan". Role baru akan langsung aktif saat pengguna
+        tersebut login kembali.
+   4. Menghapus Akun: Admin dapat menonaktifkan atau menghapus akun pengguna yang
+      melanggar ketentuan penggunaan aplikasi melalui tombol "Hapus Akun".
+
+================================================================================
+5. PANDUAN TROUBLESHOOTING & DUKUNGAN
+================================================================================
+
+A. Lupa Kata Sandi:
+   - Di halaman Login, klik "Lupa Password?". Masukkan email terdaftar Anda.
+   - Sistem akan mengirimkan link pengaturan ulang sandi ke inbox email Anda.
+   - Buka link tersebut dari browser Anda dan masukkan kata sandi baru Anda.
+
+B. Aplikasi Keluar Tiba-Tiba (Crash) / Loading Berkelanjutan:
+   - Pastikan Anda terhubung dengan koneksi internet yang stabil karena aplikasi
+     ini menggunakan Firebase database real-time.
+   - Bersihkan cache aplikasi melalui Pengaturan HP -> Aplikasi -> 
+     MediaPembelajaran -> Penyimpanan -> Hapus Cache (Clear Cache).
+   - Pastikan Anda menggunakan versi APK terbaru yang kompatibel dengan versi Android
+     perangkat Anda.
+
+C. Hubungi Customer Support:
+   - Jika mengalami kendala teknis lebih lanjut, silakan hubungi tim bantuan
+     kami melalui menu "Bantuan & Dukungan" di dalam aplikasi untuk live chat
+     dengan Admin, atau kirim email ke support@mediapembelajaran.id.
+
+================================================================================
+            Copyright 2026 MediaPembelajaran. All Rights Reserved.
+================================================================================
